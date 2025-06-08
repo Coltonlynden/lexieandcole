@@ -1,49 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lexie and Cole's Dashboard</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jellyfin</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f4f8;
+      background: #f9f9f9;
+      color: #222;
       text-align: center;
-      padding: 2em;
+      padding: 2rem;
     }
-    h1 {
-      color: #333;
-      margin-bottom: 1em;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
-    a {
-      display: block;
-      margin: 10px auto;
-      font-size: 1.2em;
-      color: #0077cc;
+    header img {
+      height: 50px;
+      width: 50px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    .column {
+      max-width: 300px;
+    }
+    .link {
+      font-size: 1.5rem;
+      color: #007acc;
+      font-weight: bold;
       text-decoration: none;
     }
-    a:hover {
+    .link:hover {
       text-decoration: underline;
     }
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 800px;
-      border: 1px solid #ccc;
-      margin-top: 2em;
+    .description {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      color: #444;
+    }
+    .form-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #007acc;
+      color: white;
+      font-weight: 700;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+    .form-link:hover {
+      background-color: #005fa3;
     }
   </style>
 </head>
 <body>
-  <h1>Lexie and Cole's Dashboard</h1>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jellyfin_Logo_2018.svg/1024px-Jellyfin_Logo_2018.svg.png" alt="Jellyfin Logo" />
+    <h1>Jellyfin</h1>
+  </header>
 
-  <a href="https://jellyfin.lexieandcole.cc" target="_blank">Jellyfin</a>
-  <a href="https://jellyseerr.lexieandcole.cc" target="_blank">Jellyseerr</a>
-  <a href="https://radarr.lexieandcole.cc" target="_blank">Radarr</a>
-  <a href="https://sonarr.lexieandcole.cc" target="_blank">Sonarr</a>
+  <div class="container">
+    <div class="column">
+      <a class="link" href="https://jellyfin.lexieandcole.cc" target="_blank" rel="noopener noreferrer">Jellyfin</a>
+      <p class="description">A free software media system to stream your videos, music, and photos.</p>
+    </div>
 
-  <h2>Submit Your Pushover User Key</h2>
-  <!-- Replace the src URL with your actual Google Form embed link -->
-  <iframe src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true">Loading…</iframe>
+    <div class="column">
+      <a class="link" href="https://jellyseerr.lexieandcole.cc" target="_blank" rel="noopener noreferrer">Jellyseerr</a>
+      <p class="description">A request and management interface for Jellyfin media.</p>
+    </div>
+  </div>
+
+  <a 
+    class="form-link" 
+    href="https://docs.google.com/forms/d/e/1FAIpQLScwBEqiGij7F1SYyd-vUZbM6zEbsBIaJmPMm13rzI7WeVXeYw/viewform?usp=header" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Submit Pushover Keys
+  </a>
 </body>
 </html>
