@@ -2,97 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jellyfin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LEXFLIX</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #222;
-      text-align: center;
-      padding: 2rem;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(90deg, #5bc0f8, #f17dc2);
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255, 105, 180, 0.3) 20px,
+        rgba(255, 105, 180, 0.3) 40px
+      );
     }
-    header {
+
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      background-color: #2d2c3c;
+      color: #ddd;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .section {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 30px;
     }
-    header img {
-      height: 50px;
-      width: 50px;
+
+    .section img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      margin-left: auto;
     }
-    header h1 {
-      font-size: 2.5rem;
+
+    .info {
+      max-width: 220px;
+    }
+
+    .info h3 {
       margin: 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
     }
-    .container {
-      display: flex;
-      justify-content: center;
-      gap: 4rem;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
+
+    .info p {
+      font-size: 0.8rem;
+      margin: 5px 0 10px;
+      color: #bbb;
     }
-    .column {
-      max-width: 300px;
-    }
-    .link {
-      font-size: 1.5rem;
-      color: #007acc;
-      font-weight: bold;
+
+    .info a {
       text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      border-radius: 10px;
+      transition: 0.3s;
     }
-    .link:hover {
-      text-decoration: underline;
-    }
-    .description {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-top: 0.5rem;
-      color: #444;
-    }
-    .form-link {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: #007acc;
-      color: white;
-      font-weight: 700;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: background-color 0.3s;
-    }
-    .form-link:hover {
-      background-color: #005fa3;
+
+    .info a:hover {
+      background-color: #fff;
+      color: #2d2c3c;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jellyfin_Logo_2018.svg/1024px-Jellyfin_Logo_2018.svg.png" alt="Jellyfin Logo" />
-    <h1>Jellyfin</h1>
-  </header>
-
   <div class="container">
-    <div class="column">
-      <a class="link" href="https://jellyfin.lexieandcole.cc" target="_blank" rel="noopener noreferrer">Jellyfin</a>
-      <p class="description">A free software media system to stream your videos, music, and photos.</p>
+    <h1>LEXFLIX</h1>
+    <p class="subtitle">Landing page for greatness.</p>
+
+    <div class="section">
+      <div class="info">
+        <h3>JELLYFIN</h3>
+        <p>Stream your Movies, TV Shows, and Live Channels (COMING SOON) here!</p>
+        <a href="#">LINK</a>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Jellyfin_Logo.svg/1200px-Jellyfin_Logo.svg.png" alt="Jellyfin Logo"/>
     </div>
 
-    <div class="column">
-      <a class="link" href="https://jellyseerr.lexieandcole.cc" target="_blank" rel="noopener noreferrer">Jellyseerr</a>
-      <p class="description">A request and management interface for Jellyfin media.</p>
+    <div class="section">
+      <div class="info">
+        <h3>JELLYSEERR</h3>
+        <p>This is where you request Movies and TV Shows you would like to see on Jellyfin!</p>
+        <a href="#">LINK</a>
+      </div>
+      <img src="https://raw.githubusercontent.com/Fallenbagel/jellyseerr/develop/public/logo_full.svg" alt="Jellyseerr Logo"/>
+    </div>
+
+    <div class="section">
+      <div class="info">
+        <h3>PUSHOVER</h3>
+        <p>This is where you can sign up to get push notifications for your downloads from Jellyseerr to Jellyfin!</p>
+        <a href="#">MORE</a>
+      </div>
+      <img src="https://play-lh.googleusercontent.com/7mVoOP9H6jj0-7IEbM1kSv-xYoQYUG9jcXY7zJMPMB_8Q-cmo6PAeGJ9LZfRC-FVuQ=w240-h480" alt="Pushover Logo"/>
     </div>
   </div>
-
-  <a 
-    class="form-link" 
-    href="https://docs.google.com/forms/d/e/1FAIpQLScwBEqiGij7F1SYyd-vUZbM6zEbsBIaJmPMm13rzI7WeVXeYw/viewform?usp=header" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    Submit Pushover Keys
-  </a>
 </body>
 </html>
