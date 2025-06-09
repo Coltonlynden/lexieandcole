@@ -21,16 +21,16 @@
   font-size: 1em;
   z-index: 9999;
 ">
-  Status: <span id="status-indicator">Checking</span>
+  Status: <span id="status-indicator">Checking...</span>
 </div>
 
 <script>
   (async () => {
     try {
       const response = await fetch("https://jellyfin.lexieandcole.cc/", { mode: "no-cors" });
-      document.getElementById("status-indicator").textContent = "Up";
-    } catch (error) {
       document.getElementById("status-indicator").textContent = "Down";
+    } catch (error) {
+      document.getElementById("status-indicator").textContent = "Up";
     }
   })();
 </script>
