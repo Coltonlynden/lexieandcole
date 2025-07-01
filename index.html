@@ -28,9 +28,9 @@
   (async () => {
     try {
       const response = await fetch("https://jellyfin.lexieandcole.cc/", { mode: "no-cors" });
-      document.getElementById("status-indicator").textContent = "Down";
-    } catch (error) {
       document.getElementById("status-indicator").textContent = "Up";
+    } catch (error) {
+      document.getElementById("status-indicator").textContent = "Down For Maintenence";
     }
   })();
 </script>
