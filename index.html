@@ -5,6 +5,21 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Lexflix">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
+<script>
+  // Only run this if in standalone mode
+  if (window.navigator.standalone) {
+    document.addEventListener('click', function (e) {
+      var target = e.target;
+      while (target && target.nodeName !== 'A') {
+        target = target.parentNode;
+      }
+      if (target && target.href && target.target === '_blank') {
+        e.preventDefault();
+        window.location = target.href;
+      }
+    }, false);
+  }
+</script>
 
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Lexflix</title><link rel="icon" type="image/png" href="https://i.imgur.com/vcbTt8z.png">
