@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Lexflix</title>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/vcbTt8z.png">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><style>path{fill:%23FF66CC;fill-rule:evenodd;clip-rule:evenodd;}</style><path d="M352.9,258.5c-6.6,17.7-21.7,28.4-33.6,23.9c-11.9-4.5-13.8-22.4-7.2-40.1c6.6-17.7,19.3-28.4,31.2-23.9C355.2,222.9,359.5,240.8,352.9,258.5z M280.1,231.8c-13.3-3.4-17.5-22.2-12.5-41.8s17.6-32.8,30.9-29.4c13.3,3.4,19.9,22.2,14.8,41.8C308.2,222.1,293.3,235.2,280.1,231.8z M261.6,254.6c11.8,4.4,26.9,11.8,48,44.1c21.2,32.3-0.7,50.2-7.4,51.9s-14,3.2-30.9-6.4c-7.6-4.3-12.4-4.9-15.4-5.4c-3,0.5-7.8,1.1-15.4,5.4c-16.9,9.5-24.2,8.1-30.9,6.4s-28.5-19.7-7.4-51.9s36.3-39.7,48-44.1C251.4,254.3,260.6,254.3,261.6,254.6z M231.9,231.8c-13.3,3.4-28.1-9.7-33.2-29.4c-5.1-19.7,1.5-38.4,14.8-41.8c13.3-3.4,25.8,9.7,30.9,29.4C249.5,209.7,245.2,228.4,231.9,231.8z M192.7,282.4c-11.9,4.5-26.9-6.2-33.6-23.9c-6.6-17.7-2.4-35.6,9.5-40.1c11.9-4.5,24.6,6.2,31.2,23.9C206.6,260,204.6,277.9,192.7,282.4z"/></svg>'),
+        linear-gradient(81deg, #00C1FF 0%, #F497FC 84%);
+      background-size: 175px, auto;
+      background-repeat: repeat, repeat;
+      background-position: center, 0% 0%;
+    }
+
+    #main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h1>Lexflix</h1>
+  </div>
+</body>
+</html>
