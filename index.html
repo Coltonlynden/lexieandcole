@@ -79,14 +79,14 @@
         statusEl.textContent = "Up";
         statusEl.style.color = "#44bae0";
       } else if (text.includes("Error 1033") || text.includes("Cloudflare Tunnel error")) {
-        statusEl.textContent = "Jellyfin is currently offline.";
+        statusEl.textContent = "Lexflix is currently offline.";
         statusEl.style.color = "#ffc0cb";
       } else {
         statusEl.textContent = "Down For Maintenance";
         statusEl.style.color = "#ffc0cb";
       }
     } catch (error) {
-      statusEl.textContent = "Unable to reach Jellyfin.";
+      statusEl.textContent = "Unable to reach Lexflix.";
       statusEl.style.color = "#ffc0cb";
     }
   })();
