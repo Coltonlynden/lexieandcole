@@ -70,7 +70,7 @@
 </div>
 
 <script>
-  (async () => {
+  async function checkStatus() {
     const statusEl = document.getElementById("status-indicator");
     try {
       const res = await fetch("https://plain-forest-3035.colton-lynden-chambers.workers.dev");
@@ -87,10 +87,13 @@
         statusEl.style.color = "#ffc0cb";
       }
     } catch (error) {
-      statusEl.textContent = "Lexflix is temporarily offline.";
+      statusEl.textContent = "Lexflix is temporarily down.";
       statusEl.style.color = "#ffc0cb";
     }
-  })();
+  }
+
+  checkStatus(); // run once on page load
+  setInterval(checkStatus, 10000); // repeat every 30 seconds (30,000 ms)
 </script>
 
 
