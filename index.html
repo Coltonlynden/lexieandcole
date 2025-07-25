@@ -69,8 +69,6 @@
   Status: <span id="status-indicator">Checking...</span>
 </div>
 
-<div id="status-indicator">Checking status…</div>
-
 <script>
   (async () => {
     const statusEl = document.getElementById("status-indicator");
@@ -89,7 +87,7 @@
         statusEl.style.color = "#ffc0cb";
       }
     } catch (error) {
-      statusEl.textContent = "Lexflix is temporarily down.";
+      statusEl.textContent = "Lexflix is temporarily offline.";
       statusEl.style.color = "#ffc0cb";
     }
   })();
