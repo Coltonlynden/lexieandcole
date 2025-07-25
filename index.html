@@ -70,9 +70,6 @@
 </div>
 
 
-<div id="status-indicator">Checking status…</div>
-<pre id="status-debug" style="background:#f0f0f0; padding:10px; font-size:0.9em;"></pre>
-
 <script>
   async function checkStatus() {
     const statusEl = document.getElementById("status-indicator");
@@ -82,8 +79,6 @@
       const res = await fetch("https://plain-forest-3035.colton-lynden-chambers.workers.dev");
       const data = await res.json();
 
-      // DEBUG OUTPUT
-      debugEl.textContent = JSON.stringify(data, null, 2);
 
       if (data.status === "up") {
         statusEl.textContent = "Up";
