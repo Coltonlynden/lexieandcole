@@ -69,16 +69,19 @@
   Status: <span id="status-indicator">Checking...</span>
 </div>
 
+<div id="status-indicator">Checking status…</div>
+
 <script>
   (async () => {
     const statusEl = document.getElementById("status-indicator");
     try {
-      const res = await fetch("https://jellyfin.lexieandcole.cc");
-      const text = await res.text();
-      if (res.ok && !text.includes("Error 1033") && !text.includes("Cloudflare Tunnel error")) {
+      const res = await fetch("https://plain-forest-3035.colton-lynden-chambers.workers.dev");
+      const data = await res.json();
+
+      if (data.status === "up") {
         statusEl.textContent = "Up";
         statusEl.style.color = "#44bae0";
-      } else if (text.includes("Error 1033") || text.includes("Cloudflare Tunnel error")) {
+      } else if (data.status === "down" && (data.code === 1033 || data.reason?.includes("Cloudflare Tunnel error"))) {
         statusEl.textContent = "Lexflix is temporarily offline.";
         statusEl.style.color = "#ffc0cb";
       } else {
